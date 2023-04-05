@@ -27,6 +27,10 @@ def countFreq(X, left, right, candidate):
             count += 1
     return count
     
-seq = ["Odysseas", "Menh", "Odysseas", "Odysseas", "Odysseas", "Koymparos","Odysseas","Alexandros","Koumparos"]
-result= findMajorityVote(seq, 9)
-print(result)
+# example input
+#seq = ["Odysseas", "Meni", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"] #output: none
+seq = ["Odysseas", "Odysseas", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"]#output: Odysseas
+
+result= findMajorityVote(seq, len(seq))
+
+print("The result is: ",result)
