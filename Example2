@@ -27,7 +27,7 @@ def countFreq(X, left, right, candidate):
             count += 1
     return count
     
-# example input
+#example input
 #seq = ["Odysseas", "Meni", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"] #output: none
 seq = ["Odysseas", "Odysseas", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"]#output: Odysseas
 
