@@ -28,5 +28,5 @@ def countFreq(X, left, right, candidate):
     return count
     
 seq = ["Odysseas", "Menh", "Odysseas", "Odysseas", "Odysseas", "Koymparos","Odysseas","Alexandros","Koumparos"]
-result= findMajorityVote(seq, 8)
+result= findMajorityVote(seq, 9)
 print(result)
