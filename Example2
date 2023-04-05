@@ -1,0 +1,32 @@
+def findMajorityVote(X, n):
+    majCandidate = findMajorityCandidate(X, 0, n-1)
+    if countFreq(X, 0, n-1, majCandidate) > n/2:
+        return majCandidate
+    else:
+        return None
+
+def findMajorityCandidate(X, left, right):
+    if left == right:
+        return X[left]
+    mid = (left + right) // 2
+    leftMaj = findMajorityCandidate(X, left, mid)
+    rightMaj = findMajorityCandidate(X, mid+1, right)
+    if leftMaj == rightMaj:
+        return leftMaj
+    Lcount = countFreq(X, left, right, leftMaj)
+    Rcount = countFreq(X, left, right, rightMaj)
+    if Lcount > Rcount:
+        return leftMaj
+    else:
+        return rightMaj
+
+def countFreq(X, left, right, candidate):
+    count = 0
+    for i in range(left, right+1):
+        if X[i] == candidate:
+            count += 1
+    return count
+    
+seq = ["Odysseas", "Menh", "Odysseas", "Odysseas", "Odysseas", "Koymparos","Odysseas","Alexandros","Koumparos"]
+result= findMajorityVote(seq, 8)
+print(result)
